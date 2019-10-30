@@ -1,0 +1,226 @@
+:root {
+    --font-gray-color: rgb(109, 108, 108);
+    --gray-color: rgb(197, 197, 197);
+    --bg-color: rgb(248, 242, 242);
+    --font-color: #333;
+    --dark-color: rgb(32, 32, 32);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    border-bottom: solid 1px var(--gray-color);
+}
+
+#title {
+    color: var(--font-gray-color);
+    font-weight: 400;
+}
+
+header, .main {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#title, .nav {
+    flex: 1 1 auto;
+}
+
+.nav {
+    float: right;
+}
+
+.nav li {
+    display: inline;
+    padding-left: 5px;
+}
+
+.nav a {
+    font-size: 12px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--font-gray-color);
+}
+
+.navWrapper {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15px;
+    border-radius: 25px;
+    border: solid 1px var(--gray-color);
+    margin:  15px auto 0;
+}
+
+
+.dropdown {
+    width: 100%;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+
+.textInput {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    border-right: solid 1px var(--gray-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="radio" i] {
+    margin: 0;
+    background-color: var(--gray-color);
+    padding: 0;
+    border: none;
+}
+
+#inputBox, #toolBox {
+    display: grid;
+}
+#inputBox {
+    grid-template-columns: 1fr 1fr;
+}
+
+#toolBox {
+    grid-template-columns: 70px 90px 70px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+select {
+    border: none;
+}
+
+#reset {
+    justify-content: right;
+}
+
+.light, .dark {
+    color: red;
+}
+
+.fontsWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows:  minmax(50%, 300px);
+    grid-auto-rows: auto;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.fontCard {
+    padding: 20px;
+    position: relative;
+    margin: 10px;
+}
+
+.fontHeader {
+    padding-top: 5px;
+    border-top: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.fontHeader p, small {
+    margin: 0;
+    padding-top: 3px;
+}
+
+.fontHeader p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.plusDiv {
+    border: solid 2px red;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: red;
+    text-align: center;
+    justify-items: center;
+    padding-top: 2px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+#unique {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#roboto, 
+#gayathri, 
+#chilanka, 
+#openSans, 
+#lato, 
+#manjari, 
+#montserrat, 
+#robotoCondensed {
+    overflow-wrap: break-word;
+    height: 100%;
+}
+
+
+.fontText {
+    overflow-wrap: break-word;
+    height: 100%;
+}
+
+
+.footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer p {
+    grid: 1;
+    text-align: center;
+}
+
+#grid {
+    margin: 3px auto 0;
+    padding: 0;
+    width: 20px;
+}
+
+#reset {
+    width: 20px;
+}
+
+.themeMode {
+    margin:  3px auto 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--gray-color);
+    border-radius: 100px;
+}
+
+.dark {
+    background-color: var(--dark-color);
+}

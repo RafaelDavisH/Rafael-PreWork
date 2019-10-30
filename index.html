@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Gayathri|Lato|Manjari|Montserrat|Open+Sans|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <header>
+                <h4 id="title"><strong>Google </strong>Fonts</h4>
+                <div>
+                    <ul class="nav">
+                        <li><a href="#">catalog</a></li>
+                        <li><a href="#">featured</a></li>
+                        <li><a href="#">articles</a></li>
+                        <li><a href="#">about</a></li> 
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <div class="main">
+            <div class="navWrapper">
+                <section id="inputBox" >
+                    <input class="textInput" type="text" name="search" placeholder="Search fonts" id="inputSearch"/>
+                    <input class="textInput" type="text" name="content" placeholder="Type something" id="input" />
+                </section>
+                <section id="toolBox">
+                    <select class="dropdown" id="size" onchange="fontSize(this)">
+                        <option value="20px">20px</option>
+                        <option value="24px">24px</option>
+                        <option value="32px">32px</option>
+                        <option value="40px">40px</option>
+                    </select>
+
+                    <div>
+                        <div class="themeMode light"></div>
+                        <div class="themeMode dark"></div>
+                    </div>
+                    <div>
+                        <span>
+                            <img id="grid" src="img/grid.png" alt="grid icon">
+                        </span>
+                    </div>
+                    <div id="reset">
+                        <span>
+                            <a href="#" onclick="resetBack()">
+                                <img id="reset" src="img/reset.png" alt="reset icon" >
+                            </a>
+                        </span>
+                    </div>
+                </section>
+            </div>
+            <div class="fontsWrapper">
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p >Roboto</p>
+                        <small id="fontAuthor">Christian Robertson</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Roboto, serif; " class="fontText">
+                        <p id="roboto">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Gayathri</p>
+                        <small id="fontAuthor">SMC</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Gayathri, serif;"  class="fontText">
+                        <p id="gayathri">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Chilanka</p>
+                        <small id="fontAuthor">SMC</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Chilanka, serif;" class="fontText">
+                        <p id="chilanka">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Open Sans</p>
+                        <small id="fontAuthor">Steve Matteson</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Open Sans, serif;" class="fontText">
+                        <p id="openSans">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Lato</p>
+                        <small id="fontAuthor">Lukasz Dziedzic</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Lato;"  class="fontText">
+                        <p id="lato">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Manjari</p>
+                        <small id="fontAuthor">Santhosh Thottingal</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Manjari, serif;" class="fontText">
+                        <p id="manjari">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Montserrat</p>
+                        <small id="fontAuthor">Julieta Ulanovsky</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Montserrat, serif;" class="fontText">
+                        <p id="montserrat">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+                <div class="fontCard">
+                    <div class="fontHeader">
+                        <p>Roboto Condensed</p>
+                        <small id="fontAuthor">Christian Robertson</small>
+                    </div>
+                    <div class="plusDiv">
+                        <span class="plusIcon">+</span>
+                    </div>
+
+                    <div style="font-family: Roboto Condensed, serif;" class="fontText">
+                        <p id="robotoCondensed">Then came the night of the first falling star</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>coded by Rafael Davis | 2019 | Chingu Pre-Work Project</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
