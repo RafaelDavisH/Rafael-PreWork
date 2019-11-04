@@ -6,6 +6,44 @@
     --dark-color: rgb(32, 32, 32);
 }
 
+
+
+/* Fonts */
+#roboto {
+    font-family: Roboto, serif;
+}
+
+#gayathri {
+    font-family: Gayathri, serif;
+}
+
+#chilanka {
+    font-family: Chilanka, serif;
+}
+
+#openSans {
+    font-family: 'Open Sans', serif;
+}
+
+#lato {
+    font-family: Lato, serif;
+}
+
+#manjari {
+    font-family: Manjari, serif;
+}
+
+#montserrat {
+    font-family: Montserrat, serif;
+}
+
+#robotoCondensed {
+    font-family: 'Roboto Condensed', serif;
+}
+
+
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -170,18 +208,6 @@ select {
     height: 100%;
 }
 
-#roboto, 
-#gayathri, 
-#chilanka, 
-#openSans, 
-#lato, 
-#manjari, 
-#montserrat, 
-#robotoCondensed {
-    overflow-wrap: break-word;
-    height: 100%;
-}
-
 
 .fontText {
     overflow-wrap: break-word;
@@ -224,3 +250,4 @@ select {
 .dark {
     background-color: var(--dark-color);
 }
+
