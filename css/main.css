@@ -1,3 +1,14 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
 :root {
     --font-gray-color: rgb(109, 108, 108);
     --gray-color: rgb(197, 197, 197);
@@ -61,8 +72,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 15px;
-    border-radius: 25px;
-    border: solid 1px var(--gray-color);
     margin:  15px auto 0;
 }
 
@@ -76,10 +85,26 @@ header {
 
 .textInput {
     border: none;
-    padding: 5px;
+    padding:10px;
     font-size: 16px;
-    border-right: solid 1px var(--gray-color);
 }
+
+#inputSearch {
+    border-right: solid 1px var(--gray-color);
+    margin-left: 15px
+}
+
+#inputBox,
+#toolBox {
+    border: solid 1px var(--gray-color);
+}
+
+
+#toolBox {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
 
 input:focus {
     outline: none;
@@ -95,8 +120,12 @@ input[type="radio" i] {
 #inputBox, #toolBox {
     display: grid;
 }
+
+
 #inputBox {
     grid-template-columns: 1fr 1fr;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 #toolBox {
@@ -121,8 +150,7 @@ select {
 .fontsWrapper {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows:  minmax(50%, 300px);
-    grid-auto-rows: auto;
+    grid-template-rows:  minmax(50%, 60%);
     justify-content: center;
     padding: 0 40px;
 }
@@ -178,23 +206,23 @@ select {
 #manjari, 
 #montserrat, 
 #robotoCondensed {
-    overflow-wrap: break-word;
-    height: 100%;
+    text-overflow: ellipsis;
 }
 
 
 .fontText {
     overflow-wrap: break-word;
-    height: 100%;
 }
 
 
 .footer {
     width: 100%;
+    height: 80px;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-content: center;
+    margin-top: 55px;
 }
 
 .footer p {
@@ -224,3 +252,103 @@ select {
 .dark {
     background-color: var(--dark-color);
 }
+
+/* Normal desktop :1200px. */
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+
+}
+
+/* Normal desktop :992px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+/* Tablet desktop :768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .fontsWrapper {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: minmax(25%,auto);
+    
+    }
+    #inputBox {
+        grid-template-columns: 1fr 1fr;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    
+    #input {
+        margin-right: 15px;
+    }
+
+    #toolBox {
+        grid-template-columns: repeat(4, 1fr);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        margin-top: 10px;
+    }
+    
+    .navWrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+
+/* small mobile :320px. */
+@media only screen and (max-width: 767px) {
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    #title {
+        text-align: center;
+    }
+
+    #navigation {
+        margin: 0 auto;
+        align-items: center;
+    }
+    .nav {
+        float: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .main {
+        width: 100%;
+    }
+
+    .fontsWrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .navWrapper {
+        width: 100%;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+    
+
+    #inputBox,
+    #toolBox {
+        border: none;
+        border-radius: none;
+    }
+
+    #inputSearch,
+    #input {
+        border-bottom: solid 1px var(--gray-color);
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    #toolBox {
+        margin-top: 15px;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 5px 10px;
+    }
+
+}
+
+/* Large Mobile :480px. */
+$large_mobile:'only screen and (min-width: 480px) and (max-width: 767px)';
